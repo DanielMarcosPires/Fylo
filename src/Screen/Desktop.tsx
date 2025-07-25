@@ -72,7 +72,7 @@ export default function Desktop() {
       <section style={StyleWeb.DesktopStyle.bgNavy900}>
         <ul className="flex flex-wrap justify-around py-28">
           <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-access-anywhere.svg" alt={undefined} />
+            <img width={70} src="/images/icon-access-anywhere.svg" alt={"Icon access anywhere"} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">
                 Access your files, anywhere
@@ -84,7 +84,7 @@ export default function Desktop() {
             </div>
           </li>
           <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-security.svg" alt={undefined} />
+            <img width={70} src="/images/icon-security.svg" alt={"Icon Security"} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Security you can trust</h2>
               <p className="opacity-90">
@@ -95,7 +95,7 @@ export default function Desktop() {
             </div>
           </li>
           <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-collaboration.svg" alt={undefined} />
+            <img width={70} src="/images/icon-collaboration.svg" alt={"Icon collaboration"} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Real-time collaboration</h2>
               <p className="opacity-90">
@@ -106,7 +106,7 @@ export default function Desktop() {
             </div>
           </li>
           <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-any-file.svg" alt={undefined} />
+            <img width={70} src="/images/icon-any-file.svg" alt={"Any File"} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Store any type of file</h2>
               <p className="opacity-90">
@@ -127,7 +127,7 @@ export default function Desktop() {
             <img
               width={1200}
               src="/images/illustration-stay-productive.png"
-              alt=""
+              alt="Illustration stay productive"
             />
           </li>
           <li className="px-4">
@@ -160,7 +160,7 @@ export default function Desktop() {
             <img
               className="absolute -left-4 -top-4"
               src="/images/bg-quotes.png"
-              alt={undefined}
+              alt={"background quotes"}
             />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -251,7 +251,7 @@ export default function Desktop() {
       </section>
       <footer className="flex flex-col items-center pt-20 pb-10">
         <div className="w-4/5">
-          <img src="/images/logo.svg" alt="" />
+          <img src="/images/logo.svg" alt="Logo Fylo in footer" />
         </div>
         <nav className="flex justify-around w-4/5">
           <div>

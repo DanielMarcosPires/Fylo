@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import "./css/style.css"
-import { FaChevronCircleRight } from "react-icons/fa";
+import { FaChevronCircleRight, FaMapMarkerAlt, FaPhoneVolume } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Desktop() {
   return (
@@ -65,13 +66,13 @@ export default function Desktop() {
         <img
           src="/images/bg-curvy-desktop.svg"
           className="absolute bottom-0 z-0"
-          alt="nada"
+          alt="nada"  
         />
       </section>
       <section style={StyleWeb.DesktopStyle.bgNavy900}>
         <ul className="flex flex-wrap justify-around py-28">
           <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-access-anywhere.svg" alt="" />
+            <img width={70} src="/images/icon-access-anywhere.svg" alt={undefined} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">
                 Access your files, anywhere
@@ -83,7 +84,7 @@ export default function Desktop() {
             </div>
           </li>
           <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-security.svg" alt="" />
+            <img width={70} src="/images/icon-security.svg" alt={undefined} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Security you can trust</h2>
               <p className="opacity-90">
@@ -94,7 +95,7 @@ export default function Desktop() {
             </div>
           </li>
           <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-collaboration.svg" alt="" />
+            <img width={70} src="/images/icon-collaboration.svg" alt={undefined} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Real-time collaboration</h2>
               <p className="opacity-90">
@@ -105,7 +106,7 @@ export default function Desktop() {
             </div>
           </li>
           <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-any-file.svg" alt="" />
+            <img width={70} src="/images/icon-any-file.svg" alt={undefined} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Store any type of file</h2>
               <p className="opacity-90">
@@ -152,14 +153,14 @@ export default function Desktop() {
       <section style={StyleWeb.DesktopStyle.bgNavy900}>
         <div className="flex justify-center relative py-28">
           <ul className="flex gap-8 relative justify-between w-5/6">
-            <img
-              className="absolute -left-4 -top-4"
-              src="/images/bg-quotes.png"
-            />
             <li
               className="w-sm p-4 rounded-2xl z-10"
               style={StyleWeb.DesktopStyle.bgNavy800}
             >
+            <img
+              className="absolute -left-4 -top-4"
+              src="/images/bg-quotes.png"
+            />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Expedita maxime, incidunt quod facere laboriosam et fugit saepe
@@ -247,12 +248,34 @@ export default function Desktop() {
           </form>
         </div>
       </section>
-      <footer className="flex justify-center">
+      <footer className="flex flex-col items-center pt-20 pb-10">
         <div className="w-4/5">
           <img src="/images/logo.svg" alt="" />
         </div>
-        <nav>
-          
+        <nav className="flex justify-around w-4/5">
+          <div>
+            <a className="flex items-center gap-2" href="#">
+              <FaMapMarkerAlt />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </a>
+          </div>
+          <div className="flex flex-col">
+            <a className="flex items-center gap-2" href=""><FaPhoneVolume /> +1-543-123-4567</a>
+            <a className="flex items-center gap-2" href=""><MdEmail />example@fylo.com</a>
+          </div>
+          <div className="flex flex-col">
+            <Link href={"#"}>About us</Link>
+            <Link href={"#"}>Jobs</Link>
+            <Link href={"#"}>Press</Link>
+            <Link href={"#"}>Blog</Link>
+          </div>
+          <div className="flex flex-col">
+            <Link href={"#"}>Contact Us</Link>
+            <Link href={"#"}>Terms</Link>
+            <Link href={"#"}>Privacy  </Link>
+          </div>
         </nav>
       </footer>
     </>

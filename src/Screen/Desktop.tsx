@@ -160,6 +160,7 @@ export default function Desktop() {
             <img
               className="absolute -left-4 -top-4"
               src="/images/bg-quotes.png"
+              alt={undefined}
             />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -1,78 +1,47 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { StyleWeb } from "@/app/globals";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import "./css/style.css"
-import { FaChevronCircleRight, FaMapMarkerAlt, FaPhoneVolume } from "react-icons/fa";
+import "./css/style.css";
+import {
+  FaChevronCircleRight,
+  FaMapMarkerAlt,
+  FaPhoneVolume,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import ItemList from "@/Components/ItemList";
+import Header from "@/Components/Header/Header";
+import Hero from "@/Components/Hero/Hero";
+import { List } from "@/Components/List";
 
 export default function Desktop() {
   return (
     <>
-      <header className="flex justify-center py-5">
-        <div className="flex justify-between w-4/5">
-          <Image
-            width={140}
-            height={45}
-            src="/images/logo.svg"
-            alt="Fylo logo"
-          />
-          <nav className="flex gap-5">
-            <Link
-              className="hover:underline hover:opacity-100 opacity-75"
-              href={"#"}
-            >
-              Feature
-            </Link>
-            <Link
-              className="hover:underline hover:opacity-100 opacity-75"
-              href={"#"}
-            >
-              Teams
-            </Link>
-            <Link
-              className="hover:underline hover:opacity-100 opacity-75"
-              href={"#"}
-            >
-              Sign in
-            </Link>
-          </nav>
-        </div>
-      </header>
-      <section className="flex relative flex-col items-center justify-center">
-        <img
-          className="relative z-20"
-          src="/images/illustration-intro.png"
-          alt="Ilustração"
-        />
-        <div className="flex relative z-20 text-center flex-col items-center gap-3 w-8/12 py-4">
-          <h1 className="text-4xl w-2/3">
-            All your files in one secure location, accesible anywhere.
-          </h1>
-          <p className="text-md w-3/4 opacity-75">
-            Fylo stories all your most important files in one secure location.
-            Access them wherever you need, share and collaborate with friends
-            family, and co-wokers.
-          </p>
-          <button
-            className="p-5 rounded-2xl w-2/6"
-            style={StyleWeb.StyleComponent.GetStarted}
-          >
-            <p className="text-2xl font-bold">Get Started</p>
-          </button>
-        </div>
-        <img
-          src="/images/bg-curvy-desktop.svg"
-          className="absolute bottom-0 z-0"
-          alt="nada"  
-        />
-      </section>
+      <Header className="flex gap-4">
+        <Link
+          className="hover:underline hover:opacity-100 opacity-75"
+          href={"#"}
+        >
+          Feature
+        </Link>
+        <Link
+          className="hover:underline hover:opacity-100 opacity-75"
+          href={"#"}
+        >
+          Teams
+        </Link>
+        <Link
+          className="hover:underline hover:opacity-100 opacity-75"
+          href={"#"}
+        >
+          Sign in
+        </Link>
+      </Header>
+      <Hero />
       <section style={StyleWeb.DesktopStyle.bgNavy900}>
-        <ul className="flex flex-wrap justify-around py-28">
-          <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-access-anywhere.svg" alt={"Icon access anywhere"} />
+        <List._ className="flex flex-wrap">
+          <List.Item className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
+            <img width={70} src="/images/icon-access-anywhere.svg" alt="Icon access anywhere" />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">
                 Access your files, anywhere
@@ -82,9 +51,13 @@ export default function Desktop() {
                 your account means your files follow you everywhere.
               </p>
             </div>
-          </li>
-          <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-security.svg" alt={"Icon Security"} />
+          </List.Item>
+          <List.Item>
+            <img
+              width={70}
+              src="/images/icon-security.svg"
+              alt={"Icon Security"}
+            />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Security you can trust</h2>
               <p className="opacity-90">
@@ -93,9 +66,13 @@ export default function Desktop() {
                 files.
               </p>
             </div>
-          </li>
-          <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
-            <img width={70} src="/images/icon-collaboration.svg" alt={"Icon collaboration"} />
+          </List.Item>
+          <List.Item>
+            <img
+              width={70}
+              src="/images/icon-collaboration.svg"
+              alt={"Icon collaboration"}
+            />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Real-time collaboration</h2>
               <p className="opacity-90">
@@ -104,8 +81,8 @@ export default function Desktop() {
                 required.
               </p>
             </div>
-          </li>
-          <li className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
+          </List.Item>
+          <List.Item>
             <img width={70} src="/images/icon-any-file.svg" alt={"Any File"} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Store any type of file</h2>
@@ -115,22 +92,22 @@ export default function Desktop() {
                 stored and shared.
               </p>
             </div>
-          </li>
-        </ul>
+          </List.Item>
+        </List._>
       </section>
       <section
         className="flex justify-center py-28"
         style={StyleWeb.DesktopStyle.bgNavy900}
       >
-        <ul className="flex gap-8 w-4/5">
-          <li>
+        <List._ className="flex gap-8 w-4/5">
+          <List.Item>
             <img
               width={1200}
               src="/images/illustration-stay-productive.png"
               alt="Illustration stay productive"
             />
-          </li>
-          <li className="px-4">
+          </List.Item>
+          <List.Item className="px-4">
             <h2 className="text-4xl font-bold py-4">
               Stay productive, wherever you are
             </h2>
@@ -147,21 +124,21 @@ export default function Desktop() {
               <p>See how fylo works</p>
               <FaChevronCircleRight />
             </Link>
-          </li>
-        </ul>
+          </List.Item>
+        </List._>
       </section>
       <section style={StyleWeb.DesktopStyle.bgNavy900}>
         <div className="flex justify-center relative py-28">
-          <ul className="flex gap-8 relative justify-between w-5/6">
-            <li
+          <List._ className="flex gap-8 relative justify-between w-5/6">
+            <List.Item
               className="w-sm p-4 rounded-2xl z-10"
               style={StyleWeb.DesktopStyle.bgNavy800}
             >
-            <img
-              className="absolute -left-4 -top-4"
-              src="/images/bg-quotes.png"
-              alt={"background quotes"}
-            />
+              <img
+                className="absolute -left-4 -top-4"
+                src="/images/bg-quotes.png"
+                alt={"background quotes"}
+              />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Expedita maxime, incidunt quod facere laboriosam et fugit saepe
@@ -180,8 +157,8 @@ export default function Desktop() {
                   <p className="opacity-80">Founder & CEO, huddle</p>
                 </div>
               </div>
-            </li>
-            <li
+            </List.Item>
+            <List.Item
               className="w-sm p-4 rounded-2xl"
               style={StyleWeb.DesktopStyle.bgNavy800}
             >
@@ -203,8 +180,8 @@ export default function Desktop() {
                   <p className="opacity-80">Founder & CEO, huddle</p>
                 </div>
               </div>
-            </li>
-            <li
+            </List.Item>
+            <List.Item
               className="w-sm p-4 rounded-2xl"
               style={StyleWeb.DesktopStyle.bgNavy800}
             >
@@ -226,12 +203,18 @@ export default function Desktop() {
                   <p className="opacity-80">Founder & CEO, huddle</p>
                 </div>
               </div>
-            </li>
-          </ul>
+            </List.Item>
+          </List._>
         </div>
       </section>
-      <section className="relative flex justify-center" style={StyleWeb.DesktopStyle.bgNavy950}>
-        <div className="flex flex-col gap-2 relative -top-15 w-1/2 p-5 rounded-xl  sombra" style={StyleWeb.DesktopStyle.bgNavy900}>
+      <section
+        className="relative flex justify-center"
+        style={StyleWeb.DesktopStyle.bgNavy950}
+      >
+        <div
+          className="flex flex-col gap-2 relative -top-15 w-1/2 p-5 rounded-xl  sombra"
+          style={StyleWeb.DesktopStyle.bgNavy900}
+        >
           <h2 className="text-2xl font-bold">Get early access today</h2>
           <p className="">
             it only takes a minutes to sign up and our free starter tier is
@@ -239,9 +222,13 @@ export default function Desktop() {
             would be happy to help you.
           </p>
           <form className="flex gap-2" action="">
-            <input className="bg-white placeholder:text-black placeholder:opacity-80 p-4 rounded-lg" type="text" placeholder="Email@example.com" />
-            <button 
-              className="rounded-lg px-2 font-bold" 
+            <input
+              className="bg-white placeholder:text-black placeholder:opacity-80 p-4 rounded-lg"
+              type="text"
+              placeholder="Email@example.com"
+            />
+            <button
+              className="rounded-lg px-2 font-bold"
               style={StyleWeb.StyleComponent.GetStarted}
             >
               Get Started For free
@@ -257,14 +244,17 @@ export default function Desktop() {
           <div>
             <a className="flex items-center gap-2" href="#">
               <FaMapMarkerAlt />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-              </a>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </a>
           </div>
           <div className="flex flex-col">
-            <a className="flex items-center gap-2" href=""><FaPhoneVolume /> +1-543-123-4567</a>
-            <a className="flex items-center gap-2" href=""><MdEmail />example@fylo.com</a>
+            <a className="flex items-center gap-2" href="">
+              <FaPhoneVolume /> +1-543-123-4567
+            </a>
+            <a className="flex items-center gap-2" href="">
+              <MdEmail />
+              example@fylo.com
+            </a>
           </div>
           <div className="flex flex-col">
             <Link href={"#"}>About us</Link>
@@ -275,7 +265,7 @@ export default function Desktop() {
           <div className="flex flex-col">
             <Link href={"#"}>Contact Us</Link>
             <Link href={"#"}>Terms</Link>
-            <Link href={"#"}>Privacy  </Link>
+            <Link href={"#"}>Privacy </Link>
           </div>
         </nav>
       </footer>

@@ -3,7 +3,7 @@ import Item from "./Item";
 
 export const List = {
   Item: Item,
-  _: ({ children, className }: ComponentProps<"div">) => (
-    <ul className={className}>{children}</ul>
+  _: ({ children, ...props }: ComponentProps<"ul">) => (
+    <ul {...props}>{children}</ul>
   ),
 };

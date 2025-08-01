@@ -9,7 +9,6 @@ import {
   FaPhoneVolume,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import ItemList from "@/Components/ItemList";
 import Header from "@/Components/Header/Header";
 import Hero from "@/Components/Hero/Hero";
 import { List } from "@/Components/List";
@@ -52,7 +51,7 @@ export default function Desktop() {
               </p>
             </div>
           </List.Item>
-          <List.Item>
+          <List.Item className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
             <img
               width={70}
               src="/images/icon-security.svg"
@@ -67,7 +66,7 @@ export default function Desktop() {
               </p>
             </div>
           </List.Item>
-          <List.Item>
+          <List.Item className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
             <img
               width={70}
               src="/images/icon-collaboration.svg"
@@ -82,7 +81,7 @@ export default function Desktop() {
               </p>
             </div>
           </List.Item>
-          <List.Item>
+          <List.Item className="flex p-5 flex-col justify-center items-center text-center flex-1/2">
             <img width={70} src="/images/icon-any-file.svg" alt={"Any File"} />
             <div className="w-2/3">
               <h2 className="text-2xl font-bold">Store any type of file</h2>

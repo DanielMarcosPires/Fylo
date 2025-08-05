@@ -4,7 +4,7 @@ import React, { ComponentProps } from 'react'
 export default function Header({className, children}:ComponentProps<'header'>) {
   return (
     <header className="flex justify-center py-5">
-        <div className="flex justify-between w-4/5">
+        <div className="flex items-center justify-between w-4/5">
           <Image
             width={140}
             height={45}
